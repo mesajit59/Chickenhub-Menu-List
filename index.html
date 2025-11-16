@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chicken Hub Menu</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background: #fafafa;
+        color: #222;
+    }
+    header {
+        background: #d62828;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        font-size: 32px;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+    .container {
+        width: 95%;
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px 0;
+    }
+    .category {
+        background: white;
+        padding: 20px;
+        margin-bottom: 25px;
+        border-radius: 8px;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+    .category h2 {
+        color: #d62828;
+        border-bottom: 2px solid #d62828;
+        padding-bottom: 6px;
+        margin-bottom: 15px;
+        font-size: 22px;
+    }
+    .item {
+        display: flex;
+        justify-content: space-between;
+        padding: 6px 0;
+        border-bottom: 1px dashed #ccc;
+        font-size: 16px;
+    }
+    .item:last-child {
+        border-bottom: none;
+    }
+    footer {
+        background: #d62828;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        font-size: 16px;
+        margin-top: 20px;
+    }
+
+    #scrollTopBtn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #d62828; /* Chicken Hub Red */
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+#scrollTopBtn:hover {
+    background: #b71c1c;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>CHICKEN HUB – FOOD MENU</header>
+
+<div class="container">
+
+<!-- ===================== BRIYANI ====================== -->
+<div class="category">
+<h2>Biryani</h2>
+<div class="item"><span>Chicken Biryani</span><span>Rs. 421</span></div>
+<div class="item"><span>Buff Biryani</span><span>Rs. 389</span></div>
+<div class="item"><span>Mutton Biryani</span><span>Rs. 550</span></div>
+<div class="item"><span>Pork Biryani</span><span>Rs. 435</span></div>
+<div class="item"><span>Veg & Egg Biryani</span><span>Rs. 360</span></div>
+<div class="item"><span>Veg & Paneer Biryani</span><span>Rs. 389</span></div>
+</div>
+
+<!-- ===================== FRIED RICE ====================== -->
+<div class="category">
+<h2>Fried Rice</h2>
+<div class="item"><span>Buff Fried Rice</span><span>Rs. 231</span></div>
+<div class="item"><span>Chicken Fried Rice</span><span>Rs. 247</span></div>
+<div class="item"><span>Egg Fried Rice</span><span>Rs. 231</span></div>
+<div class="item"><span>Mixed Fried Rice</span><span>Rs. 253</span></div>
+<div class="item"><span>Mutton Fried Rice</span><span>Rs. 330</span></div>
+<div class="item"><span>Pork Fried Rice</span><span>Rs. 275</span></div>
+<div class="item"><span>Veg Fried Rice</span><span>Rs. 198</span></div>
+</div>
+
+<!-- ===================== MOMO ====================== -->
+<div class="category">
+<h2>Momo (Steam / Fried / C / Kothey / Sadheko)</h2>
+<div class="item"><span>Buff Momo</span><span>Rs. 170 / 209 / 195 / 181 / 231</span></div>
+<div class="item"><span>Chicken Momo</span><span>Rs. 225 / 220 / 195 / 238 / 275</span></div>
+<div class="item"><span>Mutton Momo</span><span>Rs. 247 / 297 / 275 / 275 / 385</span></div>
+<div class="item"><span>Pork Momo</span><span>Rs. 238 / 242 / 220 / 220 / 330</span></div>
+<div class="item"><span>Veg Momo</span><span>Rs. 140 / 165 / 143 / 143 / 187</span></div>
+</div>
+
+<!-- ===================== SPRING ROLL ====================== -->
+<div class="category">
+<h2>Spring Roll</h2>
+<div class="item"><span>Buff Spring Roll</span><span>Rs. 209</span></div>
+<div class="item"><span>Chicken Spring Roll</span><span>Rs. 220</span></div>
+<div class="item"><span>Egg Spring Roll</span><span>Rs. 198</span></div>
+<div class="item"><span>Mixed Spring Roll</span><span>Rs. 275</span></div>
+<div class="item"><span>Paneer Spring Roll</span><span>Rs. 220</span></div>
+<div class="item"><span>Veg Spring Roll</span><span>Rs. 187</span></div>
+</div>
+
+<!-- ===================== THUKPA ====================== -->
+<div class="category">
+<h2>Thukpa</h2>
+<div class="item"><span>Buff Thukpa</span><span>Rs. 210</span></div>
+<div class="item"><span>Chicken Thukpa</span><span>Rs. 244</span></div>
+<div class="item"><span>Egg Thukpa</span><span>Rs. 198</span></div>
+<div class="item"><span>Mix Thukpa</span><span>Rs. 266</span></div>
+<div class="item"><span>Veg Thukpa</span><span>Rs. 188</span></div>
+</div>
+
+<!-- ===================== PIZZA ====================== -->
+<div class="category">
+<h2>Pizza</h2>
+<div class="item"><span>Buff Small Pizza</span><span>Rs. 495</span></div>
+<div class="item"><span>Cheese Pizza</span><span>Rs. 475</span></div>
+<div class="item"><span>Chicken Cheeza</span><span>Rs. 440</span></div>
+<div class="item"><span>Chicken Pizza</span><span>Rs. 555</span></div>
+<div class="item"><span>Chicken Small Pizza</span><span>Rs. 555</span></div>
+<div class="item"><span>Mixed Pizza</span><span>Rs. 605</span></div>
+<div class="item"><span>Mushroom Pizza</span><span>Rs. 462</span></div>
+<div class="item"><span>Veg Pizza</span><span>Rs. 450</span></div>
+</div>
+
+<!-- ===================== BURGER ====================== -->
+<div class="category">
+<h2>Burger</h2>
+<div class="item"><span>Chicken Burger with Fries</span><span>Rs. 220</span></div>
+<div class="item"><span>Crunchy Chicken Burger with Fries</span><span>Rs. 248</span></div>
+<div class="item"><span>Fish Burger with Fries</span><span>Rs. 255</span></div>
+<div class="item"><span>Grill Chicken Burger with Fries</span><span>Rs. 235</span></div>
+<div class="item"><span>Grill Ham Burger with Fries</span><span>Rs. 198</span></div>
+<div class="item"><span>Ham Burger with Fries</span><span>Rs. 187</span></div>
+<div class="item"><span>Spicy Chicken Burger with Fries</span><span>Rs. 253</span></div>
+<div class="item"><span>Veg Burger with Fries</span><span>Rs. 180</span></div>
+</div>
+
+<!-- ===================== NOODLES ====================== -->
+<div class="category">
+<h2>Noodles</h2>
+<div class="item"><span>Buff Noodles</span><span>Rs. 215</span></div>
+<div class="item"><span>Buff Spicy Keema Noodles</span><span>Rs. 300</span></div>
+<div class="item"><span>Chicken Noodles</span><span>Rs. 225</span></div>
+<div class="item"><span>Chicken Spicy Keema Noodles</span><span>Rs. 310</span></div>
+<div class="item"><span>Egg Noodles</span><span>Rs. 198</span></div>
+<div class="item"><span>Mix Noodles</span><span>Rs. 247</span></div>
+<div class="item"><span>Veg Noodles</span><span>Rs. 198</span></div>
+</div>
+
+<!-- ===================== CHHOILA ====================== -->
+<div class="category">
+<h2>Chhoila</h2>
+<div class="item"><span>Buff Chhoila</span><span>Rs. 360</span></div>
+<div class="item"><span>Chicken Chhoila</span><span>Rs. 388</span></div>
+<div class="item"><span>Mushroom Chhoila</span><span>Rs. 360</span></div>
+<div class="item"><span>Mutton Chhoila</span><span>Rs. 610</span></div>
+<div class="item"><span>Pork Chhoila</span><span>Rs. 445</span></div>
+</div>
+
+<!-- ===================== CURRY ====================== -->
+<div class="category">
+<h2>Curry</h2>
+<div class="item"><span>Buff Curry</span><span>Rs. 275</span></div>
+<div class="item"><span>Chicken Curry</span><span>Rs. 305</span></div>
+<div class="item"><span>Fish Curry</span><span>Rs. 352</span></div>
+<div class="item"><span>Mix Veg Curry</span><span>Rs. 225</span></div>
+<div class="item"><span>Mushroom Curry</span><span>Rs. 305</span></div>
+<div class="item"><span>Mutton Curry</span><span>Rs. 500</span></div>
+<div class="item"><span>Paneer Curry</span><span>Rs. 400</span></div>
+</div>
+
+<!-- ===================== RICE BOWL ====================== -->
+<div class="category">
+<h2>Rice Bowl</h2>
+<div class="item"><span>Buff Rice Bowl</span><span>Rs. 245</span></div>
+<div class="item"><span>Chicken Rice Bowl</span><span>Rs. 285</span></div>
+<div class="item"><span>Mixed Rice Bowl</span><span>Rs. 325</span></div>
+<div class="item"><span>Mutton Rice Bowl</span><span>Rs. 385</span></div>
+<div class="item"><span>Pork Rice Bowl</span><span>Rs. 325</span></div>
+<div class="item"><span>Veg Rice Bowl</span><span>Rs. 234</span></div>
+</div>
+
+<!-- ===================== SEKUWA ====================== -->
+<div class="category">
+<h2>Sekuwa</h2>
+<div class="item"><span>Badel Sekuwa</span><span>Rs. 418</span></div>
+<div class="item"><span>Buff Sekuwa</span><span>Rs. 355</span></div>
+<div class="item"><span>Chicken Sekuwa</span><span>Rs. 366</span></div>
+<div class="item"><span>Mutton Sekuwa</span><span>Rs. 630</span></div>
+<div class="item"><span>Pork Sekuwa</span><span>Rs. 444</span></div>
+</div>
+
+<!-- ===================== FISH ITEMS ====================== -->
+<div class="category">
+<h2>Fish Items</h2>
+<div class="item"><span>Fish and Chips</span><span>Rs. 550</span></div>
+<div class="item"><span>Fish Curry</span><span>Rs. 242</span></div>
+<div class="item"><span>Fish Fried (3pcs)</span><span>Rs. 495</span></div>
+<div class="item"><span>Fish Grilled (3pcs)</span><span>Rs. 495</span></div>
+<div class="item"><span>Whole Fish Fried</span><span>Rs. 770</span></div>
+</div>
+
+<!-- ===================== NON-VEG SNACKS ====================== -->
+<div class="category">
+<h2>Non-Veg Snacks</h2>
+<div class="item"><span>Buff Chilly</span><span>Rs. 341</span></div>
+<div class="item"><span>Buff Sausage Chilly</span><span>Rs. 385</span></div>
+<div class="item"><span>Chicken Chilly Boneless</span><span>Rs. 416</span></div>
+<div class="item"><span>Chicken Meat Ball Chilly</span><span>Rs. 435</span></div>
+<div class="item"><span>Chicken Sausage Chilly</span><span>Rs. 396</span></div>
+<div class="item"><span>Crazy Meat Ball</span><span>Rs. 357</span></div>
+<div class="item"><span>Meat Ball</span><span>Rs. 330</span></div>
+<div class="item"><span>Pork Chilly</span><span>Rs. 438</span></div>
+</div>
+
+<!-- ===================== STICK FOOD ====================== -->
+<div class="category">
+<h2>Stick Food</h2>
+<div class="item"><span>Buff Sausage (3pcs)</span><span>Rs. 198</span></div>
+<div class="item"><span>Cheese Corn Dog</span><span>Rs. 198</span></div>
+<div class="item"><span>Cheese with Sausage</span><span>Rs. 220</span></div>
+<div class="item"><span>Chicken Sausage (3pcs)</span><span>Rs. 225</span></div>
+<div class="item"><span>Mushroom Stick (3pcs)</span><span>Rs. 130</span></div>
+<div class="item"><span>Potato Stick (3pcs)</span><span>Rs. 130</span></div>
+<div class="item"><span>Tofu Stick (3pcs)</span><span>Rs. 198</span></div>
+</div>
+
+<!-- ===================== SANDHEKO ====================== -->
+<div class="category">
+<h2>Sandheko Dishes</h2>
+<div class="item"><span>Aalu Sadheko</span><span>Rs. 240</span></div>
+<div class="item"><span>Chicken Sadheko</span><span>Rs. 415</span></div>
+<div class="item"><span>Mutton Sadheko</span><span>Rs. 605</span></div>
+<div class="item"><span>Pork Sadheko</span><span>Rs. 445</span></div>
+<div class="item"><span>Sukuti Sadheko</span><span>Rs. 415</span></div>
+<div class="item"><span>Wai Wai Sadheko</span><span>Rs. 210</span></div>
+</div>
+
+<!-- ===================== MANCHURIAN ====================== -->
+<div class="category">
+<h2>Manchurian</h2>
+<div class="item"><span>Buff Manchurian</span><span>Rs. 308</span></div>
+<div class="item"><span>Chicken Manchurian</span><span>Rs. 330</span></div>
+<div class="item"><span>Mix Manchurian Rice</span><span>Rs. 385</span></div>
+<div class="item"><span>Veg Manchurian Rice</span><span>Rs. 220</span></div>
+<div class="item"><span>Veg Khaja Set</span><span>Rs. 360</span></div>
+</div>
+
+<!-- ===================== SOUP ====================== -->
+<div class="category">
+<h2>Soup</h2>
+<div class="item"><span>Chicken Soup</span><span>Rs. 220</span></div>
+<div class="item"><span>Mix Soup</span><span>Rs. 220</span></div>
+<div class="item"><span>Mushroom Soup</span><span>Rs. 198</span></div>
+<div class="item"><span>Non-Veg Hot & Sour Soup</span><span>Rs. 275</span></div>
+<div class="item"><span>Prawn Soup</span><span>Rs. 187</span></div>
+<div class="item"><span>Veg Hot & Sour Soup</span><span>Rs. 175</span></div>
+<div class="item"><span>Veg Soup</span><span>Rs. 165</span></div>
+</div>
+
+<!-- ===================== HOT DOG ====================== -->
+<div class="category">
+<h2>Hot Dog</h2>
+<div class="item"><span>Buff Hot Dog</span><span>Rs. 190</span></div>
+<div class="item"><span>Chicken Hot Dog</span><span>Rs. 200</span></div>
+</div>
+
+<!-- ===================== FRIES ====================== -->
+<div class="category">
+<h2>Fries</h2>
+<div class="item"><span>Animal Fries</span><span>Rs. 296</span></div>
+<div class="item"><span>Egg Chilly</span><span>Rs. 330</span></div>
+<div class="item"><span>Egg Pakoda</span><span>Rs. 286</span></div>
+<div class="item"><span>Spicy Fries</span><span>Rs. 245</span></div>
+</div>
+
+<!-- ===================== SALAD ====================== -->
+<div class="category">
+<h2>Salad</h2>
+<div class="item"><span>Chicken Caesar Salad</span><span>Rs. 385</span></div>
+<div class="item"><span>Green Salad</span><span>Rs. 165</span></div>
+<div class="item"><span>Green Salad (Nepali Style)</span><span>Rs. 176</span></div>
+<div class="item"><span>Seasonal Fruit Salad</span><span>Rs. 385</span></div>
+</div>
+
+<!-- ===================== SANDWICH ====================== -->
+<div class="category">
+<h2>Sandwich</h2>
+<div class="item"><span>Cheese Sandwich</span><span>Rs. 275</span></div>
+<div class="item"><span>Chicken Sandwich</span><span>Rs. 242</span></div>
+<div class="item"><span>Club Sandwich</span><span>Rs. 302</span></div>
+<div class="item"><span>Veg Sandwich</span><span>Rs. 165</span></div>
+</div>
+
+<!-- ===================== SEA FOOD ====================== -->
+<div class="category">
+<h2>Sea Food</h2>
+<div class="item"><span>Grilled Prawn</span><span>Rs. 825</span></div>
+</div>
+
+<!-- ===================== SIZZLER ====================== -->
+<div class="category">
+<h2>Sizzler</h2>
+<div class="item"><span>Chicken Sizzler</span><span>Rs. 605</span></div>
+<div class="item"><span>Fish Sizzler</span><span>Rs. 550</span></div>
+<div class="item"><span>Veg Sizzler</span><span>Rs. 330</span></div>
+</div>
+
+<!-- ===================== TAAS ====================== -->
+<div class="category">
+<h2>Taas</h2>
+<div class="item"><span>Badel Taas</span><span>Rs. 429</span></div>
+<div class="item"><span>Buff Taas</span><span>Rs. 341</span></div>
+<div class="item"><span>Chicken Taas</span><span>Rs. 352</span></div>
+<div class="item"><span>Mutton Taas</span><span>Rs. 605</span></div>
+<div class="item"><span>Pork Taas</span><span>Rs. 385</span></div>
+</div>
+
+<!-- ===================== TANDOORI DISHES ====================== -->
+<div class="category">
+<h2>Tandoori Dishes</h2>
+<div class="item"><span>Buff Kebab</span><span>Rs. 308</span></div>
+<div class="item"><span>Chicken Kebab</span><span>Rs. 330</span></div>
+<div class="item"><span>Chicken Tandoori Full</span><span>Rs. 1430</span></div>
+<div class="item"><span>Chicken Tandoori Half</span><span>Rs. 715</span></div>
+<div class="item"><span>Mutton Kebab</span><span>Rs. 550</span></div>
+</div>
+
+<!-- ===================== VEG SNACKS ====================== -->
+<div class="category">
+<h2>Veg Snacks</h2>
+<div class="item"><span>Aalu Sadheko</span><span>Rs. 220</span></div>
+<div class="item"><span>Cashew Nut Fried</span><span>Rs. 440</span></div>
+<div class="item"><span>Cashew Nut Sadheko</span><span>Rs. 495</span></div>
+<div class="item"><span>Cheese Ball</span><span>Rs. 385</span></div>
+<div class="item"><span>Chips Chilly</span><span>Rs. 231</span></div>
+<div class="item"><span>Dry Papad (2pcs)</span><span>Rs. 137</span></div>
+<div class="item"><span>French Fries</span><span>Rs. 244</span></div>
+<div class="item"><span>Fried Papad (2pcs)</span><span>Rs. 137</span></div>
+<div class="item"><span>Masala Papad (6pcs)</span><span>Rs. 220</span></div>
+<div class="item"><span>Mix Veg Ball</span><span>Rs. 220</span></div>
+<div class="item"><span>Mushroom Chilly</span><span>Rs. 330</span></div>
+<div class="item"><span>Onion Pakoda</span><span>Rs. 220</span></div>
+<div class="item"><span>Paneer Chilly</span><span>Rs. 330</span></div>
+<div class="item"><span>Peanut Sadheko</span><span>Rs. 220</span></div>
+<div class="item"><span>Potato Wedges</span><span>Rs. 220</span></div>
+<div class="item"><span>Veg Pakoda</span><span>Rs. 198</span></div>
+</div>
+
+<!-- ===================== CHOP SUEY ====================== -->
+<div class="category">
+<h2>Chop Suey</h2>
+<div class="item"><span>American Chop Suey (Non-Veg)</span><span>Rs. 366</span></div>
+<div class="item"><span>Chicken Chop Suey</span><span>Rs. 325</span></div>
+<div class="item"><span>Chinese Chop Suey</span><span>Rs. 355</span></div>
+<div class="item"><span>Veg Chop Suey</span><span>Rs. 266</span></div>
+</div>
+
+<!-- ===================== WRAP ====================== -->
+<div class="category">
+<h2>Wrap</h2>
+<div class="item"><span>Buff Keema Wrap</span><span>Rs. 209</span></div>
+<div class="item"><span>Buff Wrap</span><span>Rs. 225</span></div>
+<div class="item"><span>Chicken Keema Wrap</span><span>Rs. 242</span></div>
+<div class="item"><span>Chicken Wrap</span><span>Rs. 245</span></div>
+<div class="item"><span>Egg Wrap</span><span>Rs. 210</span></div>
+<div class="item"><span>Mixed Wrap</span><span>Rs. 275</span></div>
+<div class="item"><span>Paneer Wrap</span><span>Rs. 220</span></div>
+</div>
+
+<!-- ===================== PASTA ====================== -->
+<div class="category">
+<h2>Pasta</h2>
+<div class="item"><span>Spaghetti Bolognese with Keema</span><span>Rs. 440</span></div>
+<div class="item"><span>Spaghetti Carbonara with Chicken</span><span>Rs. 385</span></div>
+<div class="item"><span>Spaghetti Napolitana with Chicken</span><span>Rs. 385</span></div>
+</div>
+
+<!-- ===================== ROTI ====================== -->
+<div class="category">
+<h2>Roti</h2>
+<div class="item"><span>Plain Roti (4pcs)</span><span>Rs. 220</span></div>
+</div>
+
+</div>
+
+<footer>
+Call / WhatsApp: +977 982-3629155 OR order via Pathao/Foodmandu/Bhoj.
+</footer>
+<button id="scrollTopBtn" onclick="scrollToTop()">⬆</button>
+
+<script>
+    let topBtn = document.getElementById("scrollTopBtn");
+
+    window.onscroll = function() {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            topBtn.style.display = "block";
+        } else {
+            topBtn.style.display = "none";
+        }
+    };
+
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    }
+</script>
+
+</body>
+</html>
