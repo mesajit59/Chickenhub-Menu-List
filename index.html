@@ -152,12 +152,31 @@
     }
 }
 
+.search-container {
+    position: sticky;
+    top: 0;
+    background: #fafafa;
+    padding: 12px;
+    z-index: 900;
+}
+
+#menuSearch {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
 </style>
 </head>
 
 <body>
 
 <header>CHICKEN HUB – FOOD MENU</header>
+<div class="search-container">
+    <input type="text" id="menuSearch" placeholder="Search menu...">
+</div>
 
 <div class="container">
 
@@ -536,6 +555,17 @@ Call / WhatsApp: +977 982-3629155 OR order via Pathao/Foodmandu/Bhoj.
             behavior: "smooth"
         });
     }
+</script>
+<script>
+document.getElementById("menuSearch").addEventListener("keyup", function() {
+    let filter = this.value.toLowerCase();
+    let items = document.querySelectorAll(".item, .category h2");
+
+    items.forEach(i => {
+        let text = i.textContent.toLowerCase();
+        i.parentElement.style.display = text.includes(filter) ? "" : "none";
+    });
+});
 </script>
 
 </body>
