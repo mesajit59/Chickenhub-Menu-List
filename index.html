@@ -80,6 +80,64 @@
     background: #b71c1c;
 }
 
+/* Left Floating Buttons Container */
+#leftButtons {
+    position: fixed;
+    bottom: 80px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 1000;
+}
+
+/* Each Mini Button */
+#leftButtons a {
+    width: 45px;
+    height: 45px;
+    background: #25D366;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: white;
+    font-size: 22px;
+    text-decoration: none;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+/* Call Button (red) */
+#callFloat {
+    background: #d62828 !important;
+}
+
+/* Hover effect */
+#leftButtons a:hover {
+    transform: scale(1.1);
+}
+
+/* Scroll To Top Button */
+#scrollTopBtn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #333;
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+#scrollTopBtn:hover {
+    background: #000;
+}
+
 </style>
 </head>
 
@@ -422,7 +480,31 @@
 Call / WhatsApp: +977 982-3629155 OR order via Pathao/Foodmandu/Bhoj.
 </footer>
 <button id="scrollTopBtn" onclick="scrollToTop()">⬆</button>
+<div id="leftButtons">
+    <a href="https://wa.me/9779823629155" target="_blank" id="whatsappFloat">💬</a>
+    <a href="tel:+9779823629155" id="callFloat">📞</a>
+</div>
 
+<button id="scrollTopBtn" onclick="scrollToTop()">⬆</button>
+
+<script>
+    let topBtn = document.getElementById("scrollTopBtn");
+
+    window.onscroll = function() {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            topBtn.style.display = "block";
+        } else {
+            topBtn.style.display = "none";
+        }
+    };
+
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    }
+</script>
 <script>
     let topBtn = document.getElementById("scrollTopBtn");
 
