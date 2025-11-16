@@ -138,6 +138,20 @@
     background: #000;
 }
 
+/* Hide left floating buttons on desktop */
+@media (min-width: 769px) {
+    #leftButtons {
+        display: none;
+    }
+}
+
+/* Show only on mobile */
+@media (max-width: 768px) {
+    #leftButtons {
+        display: flex;
+    }
+}
+
 </style>
 </head>
 
