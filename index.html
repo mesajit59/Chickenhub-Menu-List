@@ -179,6 +179,42 @@
     max-width: 100%;
 }
 
+.momo-table {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.momo-row {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    padding: 8px 0;
+    border-bottom: 1px dashed #ccc;
+    font-size: 14px;
+    text-align: center;
+}
+
+.momo-row.header {
+    font-weight: bold;
+    color: #d62828;
+    border-bottom: 2px solid #d62828;
+}
+
+.momo-row div {
+    padding: 4px;
+}
+
+@media (max-width: 600px) {
+    .momo-row {
+        font-size: 12px;
+        grid-template-columns: repeat(8, 70px);
+    }
+    .momo-table {
+        overflow-x: scroll;
+        white-space: nowrap;
+    }
+}
+
+
 </style>
 
 </head>
@@ -319,13 +355,47 @@
 <!-- MOMO -->
 <div class="category" id="momo">
 <h2>Momo</h2>
-<div class="item"><span>Veg (Steam/Fried/Kothey/(Fried/C)/(Steam/C)/Sadheko/Jhol)</span><span>Rs. 140 / 150 / 150 / 180 / 170 / 190 / 160</span></div>
-<div class="item"><span>Buff (Steam/Fried/Kothey/(Fried/C)/(Steam/C)/Sadheko/Jhol)</span><span>Rs. 175 / 185 / 185 / 205 / 195 / 215 / 195</span></div>
-<div class="item"><span>Chicken (Steam/Fried/Kothey/(Fried/C)/(Steam/C)/Sadheko/Jhol)</span><span>Rs. 185 / 195 / 195 / 225 / 215 / 235 / 205</span></div>
-<div class="item"><span>Pork (Steam/Fried/Kothey/(Fried/C)/(Steam/C)/Sadheko/Jhol)</span><span>Rs. 195 / 205 / 205 / 235 / 225 / 245 / 215</span></div>
-<div class="item"><span>Mutton (Steam/Fried/Kothey/(Fried/C)/(Steam/C)/Sadheko/Jhol)</span><span>Rs. 245 / 255 / 255 / 285 / 275 / 295 / 265</span></div>
-<div class="item"><span>Paneer (Steam/Fried/Kothey/(Fried/C)/(Steam/C)/Sadheko/Jhol)</span><span>Rs. 225 / 235 / 235 / 265 / 255 / 275 / 245</span></div>
+
+<div class="momo-table">
+
+    <div class="momo-row header">
+        <div>Item</div>
+        <div>Steam</div>
+        <div>Fried</div>
+        <div>Kothey</div>
+        <div>Fried/C</div>
+        <div>Steam/C</div>
+        <div>Sadheko</div>
+        <div>Jhol</div>
+    </div>
+
+    <div class="momo-row">
+        <div>Veg</div><div>140</div><div>150</div><div>150</div><div>180</div><div>170</div><div>190</div><div>160</div>
+    </div>
+
+    <div class="momo-row">
+        <div>Buff</div><div>175</div><div>185</div><div>185</div><div>205</div><div>195</div><div>215</div><div>195</div>
+    </div>
+
+    <div class="momo-row">
+        <div>Chicken</div><div>185</div><div>195</div><div>195</div><div>225</div><div>215</div><div>235</div><div>205</div>
+    </div>
+
+    <div class="momo-row">
+        <div>Pork</div><div>195</div><div>205</div><div>205</div><div>235</div><div>225</div><div>245</div><div>215</div>
+    </div>
+
+    <div class="momo-row">
+        <div>Mutton</div><div>245</div><div>255</div><div>255</div><div>285</div><div>275</div><div>295</div><div>265</div>
+    </div>
+
+    <div class="momo-row">
+        <div>Paneer</div><div>225</div><div>235</div><div>235</div><div>265</div><div>255</div><div>275</div><div>245</div>
+    </div>
+
 </div>
+</div>
+
 
 <!-- NOODLES -->
 <div class="category" id="noodles">
