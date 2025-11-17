@@ -163,6 +163,22 @@
         border: 1px solid #ccc;
         box-sizing: border-box; /* FIX */
     }
+
+    /* FIX MOMO OVERFLOW WITHOUT CHANGING TEXT */
+.category, .item, .item span {
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+.item {
+    flex-wrap: wrap;
+}
+
+.item span {
+    max-width: 100%;
+}
+
 </style>
 
 </head>
