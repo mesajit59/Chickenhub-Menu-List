@@ -199,13 +199,47 @@
     white-space: nowrap;
 }
 
+header {
+    background: #d62828;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+header .logo {
+    width: 100px;
+    height: auto;
+}
+
+@media (max-width: 600px) {
+    header {
+        font-size: 20px;
+        padding: 12px;
+    }
+
+    header .logo {
+        width: 70px;
+    }
+}
+
 </style>
 
 </head>
 
 <body>
 
-<header>CHICKEN HUB – FOOD MENU</header>
+<header><header>
+    <img src="logo.png" alt="Chicken Hub Logo" class="logo">
+    <span>CHICKEN HUB – FOOD MENU</span>
+</header>
+</header>
 <div class="search-container">
     <input type="text" id="menuSearch" placeholder="Search menu...">
 </div>
@@ -630,7 +664,7 @@
 
 <footer>
 Call / WhatsApp: +977 9823629155<br>
-All prices are inclusive of governmant taxes.
+All prices are inclusive of government taxes.
 </footer>
 <button id="scrollTopBtn" onclick="scrollToTop()">⬆</button>
 <div id="leftButtons">
