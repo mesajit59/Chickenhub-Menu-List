@@ -11,7 +11,9 @@
         margin: 0;
         background: #fafafa;
         color: #222;
+        overflow-x: hidden; /* IMPORTANT FIX */
     }
+
     header {
         background: #d62828;
         color: white;
@@ -21,19 +23,23 @@
         font-weight: bold;
         letter-spacing: 1px;
     }
+
     .container {
         width: 95%;
         max-width: 1200px;
         margin: auto;
         padding: 20px 0;
     }
+
     .category {
         background: white;
         padding: 20px;
         margin-bottom: 25px;
         border-radius: 8px;
         box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+        word-wrap: break-word; /* FIX FOR MOMO TEXT */
     }
+
     .category h2 {
         color: #d62828;
         border-bottom: 2px solid #d62828;
@@ -41,16 +47,27 @@
         margin-bottom: 15px;
         font-size: 22px;
     }
+
     .item {
         display: flex;
         justify-content: space-between;
         padding: 6px 0;
         border-bottom: 1px dashed #ccc;
         font-size: 16px;
+        flex-wrap: wrap; /* FIX for small screens */
+        word-break: break-word; /* FULL FIX */
     }
+
+    .item span {
+        max-width: 48%; /* Prevent overflow */
+        display: inline-block;
+        word-break: break-word;
+    }
+
     .item:last-child {
         border-bottom: none;
     }
+
     footer {
         background: #d62828;
         color: white;
@@ -60,115 +77,94 @@
         margin-top: 20px;
     }
 
+    /* ---------------------- FLOATING BUTTONS ---------------------- */
+
     #scrollTopBtn {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    background: #d62828; /* Chicken Hub Red */
-    color: white;
-    border: none;
-    padding: 12px 18px;
-    border-radius: 50%;
-    font-size: 20px;
-    cursor: pointer;
-    display: none;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.3);
-    transition: 0.3s;
-}
-
-#scrollTopBtn:hover {
-    background: #b71c1c;
-}
-
-/* Left Floating Buttons Container */
-#leftButtons {
-    position: fixed;
-    bottom: 80px;
-    left: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    z-index: 1000;
-}
-
-/* Each Mini Button */
-#leftButtons a {
-    width: 45px;
-    height: 45px;
-    background: #25D366;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    color: white;
-    font-size: 22px;
-    text-decoration: none;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.3);
-    transition: 0.3s;
-}
-
-/* Call Button (red) */
-#callFloat {
-    background: #d62828 !important;
-}
-
-/* Hover effect */
-#leftButtons a:hover {
-    transform: scale(1.1);
-}
-
-/* Scroll To Top Button */
-#scrollTopBtn {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    background: #333;
-    color: white;
-    border: none;
-    padding: 12px 16px;
-    border-radius: 50%;
-    font-size: 20px;
-    cursor: pointer;
-    display: none;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.3);
-    transition: 0.3s;
-}
-
-#scrollTopBtn:hover {
-    background: #000;
-}
-
-/* Hide left floating buttons on desktop */
-@media (min-width: 769px) {
-    #leftButtons {
+        position: fixed;
+        bottom: 25px;
+        right: 25px;
+        background: #333;
+        color: white;
+        border: none;
+        padding: 12px 16px;
+        border-radius: 50%;
+        font-size: 20px;
+        cursor: pointer;
         display: none;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+        transition: 0.3s;
+        z-index: 999;
     }
-}
 
-/* Show only on mobile */
-@media (max-width: 768px) {
+    #scrollTopBtn:hover {
+        background: #000;
+    }
+
     #leftButtons {
+        position: fixed;
+        bottom: 80px;
+        left: 20px;
         display: flex;
+        flex-direction: column;
+        gap: 12px;
+        z-index: 1000;
     }
-}
 
-.search-container {
-    position: sticky;
-    top: 0;
-    background: #fafafa;
-    padding: 12px;
-    z-index: 900;
-}
+    #leftButtons a {
+        width: 45px;
+        height: 45px;
+        background: #25D366;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        color: white;
+        font-size: 22px;
+        text-decoration: none;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+        transition: 0.3s;
+    }
 
-#menuSearch {
-    width: 100%;
-    padding: 12px 15px;
-    font-size: 16px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-}
+    #callFloat {
+        background: #d62828 !important;
+    }
 
+    #leftButtons a:hover {
+        transform: scale(1.1);
+    }
+
+    /* Hide buttons on desktop */
+    @media (min-width: 769px) {
+        #leftButtons { display: none; }
+    }
+
+    /* Show only on mobile */
+    @media (max-width: 768px) {
+        #leftButtons { display: flex; }
+    }
+
+    /* ---------------------- SEARCH BAR FIX ---------------------- */
+
+    .search-container {
+        position: sticky;
+        top: 0;
+        background: #fafafa;
+        padding: 12px;
+        z-index: 900;
+        width: 100%;
+        box-sizing: border-box; /* FIX */
+    }
+
+    #menuSearch {
+        width: 100%;
+        padding: 12px 15px;
+        font-size: 16px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        box-sizing: border-box; /* FIX */
+    }
 </style>
+
 </head>
 
 <body>
